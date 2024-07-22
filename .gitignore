@@ -45,7 +45,6 @@ output/
 config/configMaps.js
 
 package-lock.json
-package.json
 Web.config
 Web.Debug.config
 # Snowpack dependency directory (https://snowpack.dev/)
