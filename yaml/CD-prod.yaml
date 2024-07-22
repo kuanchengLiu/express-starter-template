@@ -84,8 +84,8 @@ steps:
   condition: always()
   inputs:
     subject: 'CosmosDBRestAPI CD-prod {environmentStatus} in ${{parameters.deployTarget}} with image:$(resources.pipeline.res.sourceCommit)'
-    toAddress: 'png.all@hp.com'
-    defaultDomain: hp.com
+    toAddress: 'all@domain.com'
+    defaultDomain: domain.com
     enableTLS: false
     smtpConnectionEndpoint: 'AKS_email_connection'
     
