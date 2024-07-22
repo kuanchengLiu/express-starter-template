@@ -1,4 +1,4 @@
-FROM harbor.ext.hp.com/prism-next-generation/base-images:node-16.20.2-alpine3.18
+FROM localhost/prism-next-generation/base-images:node-16.20.2-alpine3.18
 
 # Create app directory
 WORKDIR /usr/src/app
