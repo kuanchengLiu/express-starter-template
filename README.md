@@ -1,8 +1,8 @@
-<h3 align="center">CosmosDBRestAPI</h3>
+<h3 align="center">express-starter-template</h3>
 
 ---
 
-<p align="center"> An API services which related to connecting to cosmosDB
+<p align="center"> An API template to start express on the easy way
     <br> 
 </p>
 
