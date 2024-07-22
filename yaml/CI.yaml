@@ -1,0 +1,86 @@
+trigger:
+- dev
+pr: none
+
+variables:
+  nodeVersion: '16.20.2'
+  jestVersion: '29.7.0'
+  jestjunitVersion: '16.0.0'
+  dockerRepo: pdng-cosmosrestapi
+  imageTag: '$(Build.SourceVersion)'
+        
+pool:
+  name: codeway-aws-linux2023
+
+steps:
+- bash: printenv | sort
+
+- task: SonarQubePrepare@5
+  inputs:
+    SonarQube: 'GIS_Sq'
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    cliProjectKey: 'GIS_PDNG_CosmosDBRestAPI'
+    cliProjectName: 'PDNG_CosmosDBRestAPI'
+    cliSources: ./CosmosDBRestAPI/public/,./CosmosDBRestAPI/routes/
+    extraProperties: |
+      # sonar.cs.vstest.reportsPaths=$(Agent.TempDirectory)/output/coverage/lcov.info
+      sonar.javascript.lcov.reportPaths=$(Build.SourcesDirectory)/CosmosDBRestAPI/output/code-coverage/lcov.info
+
+- task: NodeTool@0
+  displayName: Install Node.js
+  inputs:
+    versionSpec: $(nodeVersion)
+    checkLatest: true
+
+- bash: |
+    node -v
+    npm -v
+  displayName: Validate nodejs installation
+
+- script: |
+    cd CosmosDBRestAPI
+    npm install
+    npm install --save-dev jest@$(jestVersion)
+    npm install --save-dev jest-junit@$(jestjunitVersion)
+    npm update
+    npm ln
+    npm audit fix
+  displayName: "Install npm and jest"
+
+- task: Npm@1
+  displayName: 'npm test'
+  inputs:
+    command: custom
+    workingDir: '$(Build.SourcesDirectory)/CosmosDBRestAPI'
+    verbose: false
+    customCommand: 'run test'
+
+- task: Docker@2
+  displayName: buildAndPush
+  inputs:
+    containerRegistry: 'Harbor'
+    repository: 'prism-next-generation/$(dockerRepo)'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
+    tags: '$(imageTag)' 
+
+- task: trivy@1
+  inputs:
+    docker: false
+    image: harbor.ext.hp.com/prism-next-generation/$(dockerRepo):$(imageTag)
+    ignoreUnfixed: true
+    debug: true
+    severities: 'CRITICAL'
+    options: '--skip-policy-update'
+
+- task: PublishTestResults@2
+  displayName: 'Publish Test Results **/junit.xml'
+  inputs:
+    testResultsFormat: 'Junit'
+    testResultsFiles: '**/junit.xml'
+    
+- task: SonarQubeAnalyze@5 
+
+- publish: $(Build.SourcesDirectory)/CosmosDBRestAPI/yaml
+  artifact: yaml

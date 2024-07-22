@@ -1,0 +1,101 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cosmosapp-deployment
+  labels:
+    app: cosmosapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cosmosapp
+  template:
+    metadata:
+      annotations:
+        linkerd.io/inject: enabled
+      labels:
+        app: cosmosapp
+    spec:
+      containers:
+      - name: pdng-cosmosrestapi
+        image: harbor.ext.hp.com/prism-next-generation/pdng-cosmosrestapi:tag
+        securityContext:
+          allowPrivilegeEscalation: false
+        volumeMounts:
+         - mountPath: "/etc/sp-certificate"
+           name: pngkeyvault
+           readOnly: true
+         - mountPath: "/etc/https-certificate"
+           name: httpscertificate
+           readOnly: true
+         - mountPath: "/mnt/azure-keyvault-secret"
+           name: azure-keyvault-secret
+           readOnly: true
+         - mountPath: "/app/config"
+           name: config
+           readOnly: true
+         - mountPath: "/app/other-config"
+           name: other-config
+           readOnly: true
+        ports:
+        - containerPort: 3000
+        env:
+        - name: CONFIG_ENVIRONMENT_PROFILE
+          valueFrom: 
+            configMapKeyRef:
+              name: env-configmap
+              key: environment.profile
+        - name: REGION
+          valueFrom: 
+            configMapKeyRef:
+              name: env-configmap
+              key: region
+        - name: COSMOS_HOST
+          valueFrom: 
+            configMapKeyRef:
+              name: env-configmap
+              key: cosmos.host
+        - name: MULTIWRITELOC 
+          valueFrom: 
+            configMapKeyRef:
+              name: env-configmap
+              key: multiwriteloc
+        - name: PREFREGION
+          valueFrom: 
+            configMapKeyRef:
+              name: env-configmap
+              key: prefregion
+      imagePullSecrets:
+      - name: harbordockerconfig
+      volumes:
+       - name: pngkeyvault
+         secret:
+          secretName: pngkeyvault
+       - name: httpscertificate
+         secret:
+          secretName: httpscertificate
+       - name: azure-keyvault-secret
+         csi:
+           driver: secrets-store.csi.k8s.io
+           readOnly: true
+           volumeAttributes:
+             secretProviderClass: "azure-keyvault-secret"
+       - name: config
+         configMap:
+           name: json-configmap
+       - name: other-config
+         configMap:
+           name: other-configmap
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cosmosapp-service
+spec:
+  selector:
+    app: cosmosapp
+  ports:
+    - protocol: TCP
+      name: http
+      port: 3000
+      targetPort: 3000

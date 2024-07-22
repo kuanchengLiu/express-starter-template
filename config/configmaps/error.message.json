@@ -1,0 +1,824 @@
+{
+  "0000": {
+    "Message": "Unexpected error occurred while processing the request.",
+    "Suggestion": "Please contact support team or dev team for more information."
+  },
+  "1001": {
+    "Message": "The resource owner or a policy denied the request",
+    "HttpStatus": "400"
+  },
+  "1002": {
+    "Message": "Access token got expired and found invalid while validating in PDNG Authorization API",
+    "HttpStatus": "400"
+  },
+  "1003": {
+    "Message": "Uploaded file already exists",
+    "HttpStatus": "400"
+  },
+  "1004": {
+    "Message": "Account key of Blob account storage is expired",
+    "HttpStatus": "500"
+  },
+  "1005": {
+    "Message": "PDNG athorization API is down",
+    "HttpStatus": "500"
+  },
+  "1006": {
+    "Message": "The client provided prompt=none, but the end user has not consented to the requested scopes, so the request cannot proceed",
+    "HttpStatus": "400"
+  },
+  "1007": {
+    "Message": "Database container resource not available",
+    "HttpStatus": "500"
+  },
+  "1008": {
+    "Message": "Authorization token should not be empty",
+    "HttpStatus": "400"
+  },
+  "1009": {
+    "Message": "Exception occurred while generating PDNG JWT token",
+    "HttpStatus": "500"
+  },
+  "1010": {
+    "Message": "Token verification Failed",
+    "HttpStatus": "500"
+  },
+  "1011": {
+    "Message": "Uploading image Failed",
+    "HttpStatus": "500"
+  },
+  "1012": {
+    "Message": "End user interaction is required before the authentication can proceed. This will be returned, for example, when a client requests an ACR requiring a level of authentication that cannot be satisfied because the end user has not been set up for an authentication method required by the ACR",
+    "HttpStatus": "400"
+  },
+  "1013": {
+    "Message": "An invalid client ID was provided",
+    "HttpStatus": "400"
+  },
+  "1014": {
+    "Message": "The client provided invalid client credentials",
+    "HttpStatus": "400"
+  },
+  "1015": {
+    "Message": "The authorization grant is invalid, expired, revoked, does not match the redirect URI originally provided, or does not match the client that made the original request. This is most likely to occur when an expired authorization code is used",
+    "HttpStatus": "400"
+  },
+  "1016": {
+    "Message": "Please login with uid identity provider",
+    "HttpStatus": "400"
+  },
+  "1017": {
+    "Message": "The authorization request is missing a required parameter includes an unsupported parameter value Redirect URI Mismatch or is otherwise malformed",
+    "HttpStatus": "400"
+  },
+  "1018": {
+    "Message": "The requested scope is invalid, unknown, malformed, or exceeds the scope granted by the resource owner",
+    "HttpStatus": "400"
+  },
+  "1019": {
+    "Message": "Blob storage account keys are invalid",
+    "HttpStatus": "500"
+  },
+  "1020": {
+    "Message": "The user has not completed the sign-in flow within the allotted time (currently 30 minutes after an UID form loads)",
+    "HttpStatus": "400"
+  },
+  "1021": {
+    "Message": "Requested parameter is invalid, unknown or malformed",
+    "HttpStatus": "400"
+  },
+  "1022": {
+    "Message": "No File selected, please upload a file",
+    "HttpStatus": "400"
+  },
+  "1023": {
+    "Message": "Failed while sending rest api request to PDNG node js",
+    "HttpStatus": "500"
+  },
+  "1024": {
+    "Message": "PDNG Node JS server is down",
+    "HttpStatus": "500"
+  },
+  "1025": {
+    "Message": "Unable to find valid certification path to Node JS Server",
+    "HttpStatus": "500"
+  },
+  "1026": {
+    "Message": "User is not Active or Bearer token is expired/invalid, please try again with valid inputs.",
+    "HttpStatus": "400"
+  },
+  "1027": {
+    "Message": "parameters are required to process the request",
+    "HttpStatus": "400"
+  },
+  "1028": {
+    "Message": "Database resource not available",
+    "HttpStatus": "500"
+  },
+  "1029": {
+    "Message": "The server encountered an unexpected condition that prevented it from fulfilling the request in IP Endpoint",
+    "HttpStatus": "500"
+  },
+  "1030": {
+    "Message": "The server encountered an unexpected condition that prevented it from fulfilling the request",
+    "HttpStatus": "500"
+  },
+  "1033": {
+    "Message": "The client attempted to use a grant type that it is not registered to use",
+    "HttpStatus": "400"
+  },
+  "1034": {
+    "Message": "You are not authorized user",
+    "HttpStatus": "401"
+  },
+  "1035": {
+    "Message": "The client specified an authorization grant type that is not supported",
+    "HttpStatus": "400"
+  },
+  "1036": {
+    "Message": "The client specified an unsupported response_type value",
+    "HttpStatus": "400"
+  },
+  "1037": {
+    "Message": "Please upload only one file",
+    "HttpStatus": "400"
+  },
+  "1038": {
+    "Message": "Requested role's resources are not available in database",
+    "HttpStatus": "400"
+  },
+  "1039": {
+    "Message": "User roles are not available in database",
+    "HttpStatus": "500"
+  },
+  "1040": {
+    "Message": "Database connection details are invalid. please verify",
+    "HttpStatus": "500"
+  },
+  "1041": {
+    "Message": "Exception while validating Bearer token",
+    "HttpStatus": "500"
+  },
+  "1042": {
+    "Message": "Uploaded empty file, please upload file with content",
+    "HttpStatus": "400"
+  },
+  "1044": {
+    "Message": "Failures in Change Feed configuration",
+    "HttpStatus": "400"
+  },
+  "1045": {
+    "Message": "Input 'blobId' provided is empty or invalid, please provide valid blobId, remove extension if exists",
+    "HttpStatus": "400"
+  },
+  "1046": {
+    "Message": "Chunk map download failed",
+    "HttpStatus": "400"
+  },
+  "1047": {
+    "Message": "Incorrect chunk map file format",
+    "HttpStatus": "400"
+  },
+  "1048": {
+    "Message": "The specified blob does not exist.",
+    "HttpStatus": "400"
+  },
+  "1049": {
+    "Message": "Username is null",
+    "HttpStatus": "400"
+  },
+  "1050": {
+    "Message": "no docs found",
+    "HttpStatus": "400"
+  },
+  "1051": {
+    "Message": "Unable to process the request, please check the log files",
+    "HttpStatus": "500"
+  },
+  "1052": {
+    "Message": "invalid Request parameters or Request Body",
+    "HttpStatus": "400"
+  },
+  "1053": {
+    "Message": "Unable to process multiple inputs residing under 'properties' parameter, please provide single input",
+    "HttpStatus": "400"
+  },
+  "1054": {
+    "Message": "Connection with Azure Key Vault got failed",
+    "HttpStatus": "500"
+  },
+  "1055": {
+    "Message": "Blob not exists for requested BlobId",
+    "HttpStatus": "404"
+  },
+  "1056": {
+    "Message": "username' parameter is empty or not provided or invalid,please provide valid username",
+    "HttpStatus": "400"
+  },
+  "1057": {
+    "Message": "password' parameter is empty or not provided,please provide password",
+    "HttpStatus": "400"
+  },
+  "1058": {
+    "Message": "application' parameter is empty or not provided or invalid,please provide valid application name",
+    "HttpStatus": "400"
+  },
+  "1059": {
+    "Message": "Unauthorized access, application name is not whitelisted please contact support",
+    "HttpStatus": "401"
+  },
+  "1060": {
+    "Message": "Failed while sending rest api request to PDNG athorization API",
+    "HttpStatus": "500"
+  },
+  "1061": {
+    "Message": "Failed while sending rest api request to OneUID OAuth Rest API",
+    "HttpStatus": "500"
+  },
+  "1062": {
+    "Message": "Invalid username or password, please try again with valid credentials",
+    "HttpStatus": "400"
+  },
+  "1063": {
+    "Message": "User Account is locked",
+    "HttpStatus": "400"
+  },
+  "1064": {
+    "Message": "Access token is expired or invalid, please try again with valid details",
+    "HttpStatus": "400"
+  },
+  "1065": {
+    "Message": "'Bearer' request header is empty or invalid,please provide Bearer token",
+    "HttpStatus": "400"
+  },
+  "1066": {
+    "Message": "transactionId' parameter is empty or not provided,please provide transactionId",
+    "HttpStatus": "400"
+  },
+  "1067": {
+    "Message": "expires_in' parameter is empty or not provided,please provide expires_in",
+    "HttpStatus": "400"
+  },
+  "1069": {
+    "Message": "Empty Request parameters or Request Body, please provide valid input",
+    "HttpStatus": "400"
+  },
+  "1070": {
+    "Message": "Invalid 'metadata' JSON Format, please provide valid JSON Format",
+    "HttpStatus": "400"
+  },
+  "1071": {
+    "Message": "Invalid uploaded file, extension is not acceptable, acceptable formats are:",
+    "HttpStatus": "400"
+  },
+  "1072": {
+    "Message": "Invalid uploaded file, name of file is not acceptable",
+    "HttpStatus": "400"
+  },
+  "1073": {
+    "Message": "Invalid 'actionType', acceptable action types are: Create, Read, Update and Delete",
+    "HttpStatus": "400"
+  },
+  "1074": {
+    "Message": "serviceNamespace' parameter is empty or not provided,please provide Service Bus name",
+    "HttpStatus": "400"
+  },
+  "1075": {
+    "Message": "topicName' parameter is empty or not provided,please provide Topic name",
+    "HttpStatus": "400"
+  },
+  "1076": {
+    "Message": "actionType' parameter is empty or not valid,please provide valid Action Type,acceptable values are: ",
+    "HttpStatus": "400"
+  },
+  "1077": {
+    "Message": "subscriptionName' parameter is empty or not provided,please provide Subscription name",
+    "HttpStatus": "400"
+  },
+  "1078": {
+    "Message": "Matching Shared access policy is not defined for requested topic and actionType, please create SAS policy for topic",
+    "HttpStatus": "500"
+  },
+  "1079": {
+    "Message": "Exception occurred while generating Service Bus SAS token.",
+    "HttpStatus": "500"
+  },
+  "1081": {
+    "Message": "keyType' is invalid, acceptable values are 'primary' or 'secondary'",
+    "HttpStatus": "400"
+  },
+  "1082": {
+    "Message": "'keyType' and 'dbAccount' are required to process the request, please provide them",
+    "HttpStatus": "400"
+  },
+  "1083": {
+    "Message": "Invalid key provided to retrieve System Property key",
+    "HttpStatus": "500"
+  },
+  "1084": {
+    "Message": "Invalid 'tokenType', please provide valid tokenType, acceptable values are 'jwt' and 'servicebus'",
+    "HttpStatus": "400"
+  },
+  "1085": {
+    "Message": "Issue while connecting to OneUID server, please try again after sometime",
+    "HttpStatus": "500"
+  },
+  "1086": {
+    "Message": "Issue while connecting to Authorization API, please try again after sometime",
+    "HttpStatus": "500"
+  },
+  "1087": {
+    "Message": "Issue while connecting to Cosmos Rest API, please try again after sometime",
+    "HttpStatus": "500"
+  },
+  "1088": {
+    "Message": "Either Cosmos Master key or AzureKeyCredential required to configure Cosmos DB Client",
+    "HttpStatus": "500"
+  },
+  "1089": {
+    "Message": "Service bus name is invalid, please provide valid Service Bus Namespace",
+    "HttpStatus": "400"
+  },
+  "1090": {
+    "Message": "Topic name is invalid, please provide valid Topic name",
+    "HttpStatus": "400"
+  },
+  "1091": {
+    "Message": "Subscription name is invalid, please provide valid Subscription name",
+    "HttpStatus": "400"
+  },
+  "1092": {
+    "Message": "Secret is not exists in KeyVault, please create it",
+    "HttpStatus": "500"
+  },
+  "1093": {
+    "Message": "expires_in' parameter is invalid,please provide expiration in seconds",
+    "HttpStatus": "400"
+  },
+  "1094": {
+    "Message": "expires_in' value is not acceptable,please provide expires_in between",
+    "HttpStatus": "400"
+  },
+  "1095": {
+    "Message": "HashValue of blob is mismatch with blob name and failed to upload blob file to Temporary container",
+    "HttpStatus": "400"
+  },
+  "1096": {
+    "Message": "HashValue of blob is mismatch with blob name, replaced existing blob file in Error container",
+    "HttpStatus": "400"
+  },
+  "1097": {
+    "Message": "HashValue of blob is mismatch with blob name, blob file moved to Error container",
+    "HttpStatus": "400"
+  },
+  "1098": {
+    "Message": "HashValue of blob is mismatch with blob name, blob file copied to Error container, unable to delete it from Temporary container",
+    "HttpStatus": "400"
+  },
+  "1099": {
+    "Message": "HashValue of blob is mismatch with blob name, failed to copy to Error container, blob file deleted from Temporary container",
+    "HttpStatus": "400"
+  },
+  "1100": {
+    "Message": "HashValue of blob is mismatch with blob name, failed to copy to Error container, unable to delete it from Temporary container",
+    "HttpStatus": "400"
+  },
+  "1101": {
+    "Message": "Failed to calculate the hash value, replaced existing blob file in Error container",
+    "HttpStatus": "400"
+  },
+  "1102": {
+    "Message": "Failed to calculate the hash value, blob file moved to Error container",
+    "HttpStatus": "400"
+  },
+  "1103": {
+    "Message": "Failed to calculate the hash value, blob file copied to Error container, unable to delete it from Temporary container",
+    "HttpStatus": "400"
+  },
+  "1104": {
+    "Message": "Failed to calculate the hash value, failed to copy to Error container, blob file deleted from Temporary container",
+    "HttpStatus": "400"
+  },
+  "1105": {
+    "Message": "Failed to calculate the hash value, failed to copy to Error container, unable to delete it from Temporary container",
+    "HttpStatus": "400"
+  },
+  "1106": {
+    "Message": "Configuration of Cosmos DB Client is failed, please check logs for more details",
+    "HttpStatus": "500"
+  },
+  "1107": {
+    "Message": "Account key of Blob account storage is expired",
+    "HttpStatus": "500"
+  },
+  "1108": {
+    "Message": "Configuration of Service Bus Client is failed, please check logs for more details",
+    "HttpStatus": "500"
+  },
+  "1109": {
+    "Message": "Invalid 'actionType', acceptable action types are:",
+    "HttpStatus": "400"
+  },
+  "1110": {
+    "Message": "Combination of Action type and Document type is invalid, please try again with valid values",
+    "HttpStatus": "500"
+  },
+  "1111": {
+    "Message": "Combination of Action type and Document type is invalid to find matching User Role, please try again with valid values",
+    "HttpStatus": "400"
+  },
+  "1112": {
+    "Message": "Export Service got interrupted, Client may be aborted or broken pipe",
+    "HttpStatus": "400"
+  },
+  "1113": {
+    "Message": "Export Service is busy not able to accept new requests, please try again after sometime",
+    "HttpStatus": "500"
+  },
+  "1114": {
+    "Message": "Invalid 'documentType', please provide valid Document Type;",
+    "HttpStatus": "400"
+  },
+  "1115": {
+    "Message": "'metadata' missing, please provide metadata in request header",
+    "HttpStatus": "400"
+  },
+  "1117": {
+    "Message": "Storage Account - Container not found",
+    "HttpStatus": "500"
+  },
+  "1118": {
+    "Message": "Parameters are invalid, please provide valid inputs",
+    "HttpStatus": "400"
+  },
+  "1119": {
+    "Message": "Bearer or username & password are empty/invalid, please provide Bearer Token in Request Header or User Name & Password in Request Body",
+    "HttpStatus": "400"
+  },
+  "1121": {
+    "Message": "User is not Active or Token is invalid, please try again with valid inputs",
+    "HttpStatus": "400"
+  },
+  "1122": {
+    "Message": "Issue while connecting to Authentication API, please try again after sometime",
+    "HttpStatus": "500"
+  },
+  "1123": {
+    "Message": "Invalid 'authorize', please provide valid Authorize, acceptable format is ActionType|DocumentType",
+    "HttpStatus": "400"
+  },
+  "1124": {
+    "Message": "User provided BearerToken, Username and Password , please provide either BearerToken in Request Header or User Name & Password in Request Body",
+    "HttpStatus": "400"
+  },
+  "1125": {
+    "Message": "Unsupported operation, please try again with valid inputs",
+    "HttpStatus": "400"
+  },
+  "1126": {
+    "Message": "Unable to connect to Redis Server",
+    "HttpStatus": "500"
+  },
+  "1127": {
+    "Message": "Unable to connect to other Services, please try again after sometime",
+    "HttpStatus": "500"
+  },
+  "1128": {
+    "Message": "Combination of Action type and Document type is invalid to find matching Storage container mapping details, please try again with valid values",
+    "HttpStatus": "400"
+  },
+  "1129": {
+    "Message": "'X-Request-ID' is invalid, please try again with valid values",
+    "HttpStatus": "400"
+  },
+  "1130": {
+    "Message": "'PDNGTranID' is invalid, please try again with valid values",
+    "HttpStatus": "400"
+  },
+  "2001": "Input Json document is expected.",
+  "2002": "Location is Null or location is not a valid string.",
+  "2003": "Servername cannot be Null or server name is not a valid string.",
+  "2004": "Site cannot be Null or site is not a valid string.",
+  "2005": "IPAddress cannot be Null or is not valid.",
+  "2006": "L2fullname cannot be Null or L2 full name is not a valid string.",
+  "2007": "PMfullname cannot be Null or PM full name is not a valid string",
+  "2008": "ServerType should be among these: ",
+  "2009": "Location should exist in the container. Pass the right location. Location list of system is: ",
+  "2010": "L2 do not exist in Users container. Pass the right L2 name.",
+  "2011": "PM do not exist in Users container. Pass the right PM name.",
+  "2012": "No Server exists in this site.",
+  "2013": "Role passed is null please pass the appropriate input or role is not a valid string",
+  "2014": "No users exists for this role.",
+  "2015": "OwnerType is Null or is not a valid string",
+  "2016": "SkuNumber is Null or SkuNumber is not a valid string.",
+  "2017": "Invalid Location",
+  "2018": "Owner Conflict - This SKU already exist in the table with different owner. Please contact support team for the help",
+  "2019": "Owner Error - We have more than one owners for this SKU.",
+  "2020": "There is same entry in the container for Sku and location",
+  "2021": "Invalid input - Insert not allowed when there is a SKU in the table for ALL sites.",
+  "2022": "Owner Conflict - The SKU is currently owned by the division: ",
+  "2023": "SKU does not exist in the container.",
+  "2024": "No records exist in the container.",
+  "2025": "Current OwnerType is null or not a valid string",
+  "2026": "NewOwner is null or is not a valid string",
+  "2027": "Current OwnerType and NewOwnerType cannot be same.",
+  "2028": "Invalid Sku or no entry in ExportAllowed.",
+  "2029": "Rparam should be either ExportableSkus or SkuServerLoc_exportable: ",
+  "2030": "Cannot find current server.",
+  "2031": "New PM or L2 user do not updated in Users container, Please re check.",
+  "2032": "No any changes found in existing PM or L2 users, Please re check.",
+  "2033": "New PM or L2 user do not exists in Users container, Please re check.",
+  "2034": "ExpirationDt is null, Pass the correct ExpirationDt.",
+  "2035": "Priority is null, Pass the correct Priority.",
+  "2036": "NewOwnerType is null or not a valid string",
+  "2037": "Sku is not updated, Kindly check logs for more information.",
+  "2038": "No SKU exists for this Site build plan.",
+  "2039": "Rparam is null, Pass the Rparam as BP_SKULIST, SERVER_SKUCOUNI,ALLSERVER_SKUCOUNI,SERVER_SKULISTEXPALLOW or BUILDPLAN_SIZE.",
+  "2040": "RParam is invalid, It should be either Server_SiteDesc, server_BP, Unique_BP or Site_server.",
+  "2041": "No users exists for this role.",
+  "2042": "ExpirationDt is not a valid DATE",
+  "2043": "An issue occurred, please contact support team: ",
+  "2044": "Sku is not deleted, Kindly check logs for more information.",
+  "2045": "NO SKU available yet in system.",
+  "2046": "SiteBuildPlan is null, Pass the correct SiteBuildPlan.",
+  "2047": "SKU not allowed to export to any location.",
+  "2048": "BlobId is invalid.",
+  "2049": "Blob metadata has been created with BlobID: ",
+  "2050": "Query successful with BlobId: ",
+  "2051": "Entry with the same server name and build plan exists : ",
+  "2052": "Not sending email notification to users and not inserting in to the direct table!",
+  "2053": "Email sent to users and email record is insertion in to the direct table only in HP network.Please connect with HP network!",
+  "2054": "Sku is not allowed to export to location : ",
+  "2055": "No results to be pushed to service bus - Could not find BuildPlan related to the SKU.",
+  "2056": "Input request params is expected.",
+  "2057": "The Sku is not part of the buildplan yet: ",
+  "2058": "No results to be pushed to service bus - No available SKU/BOM found in SkuToBom.",
+  "2059": "Rparam is null, Pass the Rparam as BP_SKULIST, SERVER_SKUCOUNI,ALLSERVER_SKUCOUNT,SERVER_SKULISTEXPALLOW or BUILDPLAN_SIZE.",
+  "2060": "No SKU exists for this Site build plan.",
+  "2061": "No BOM exists with Bom Doc_type for this Site build plan.",
+  "2062": "None of the SKUs processed",
+  "2063": "No Buildplan exist on the server.",
+  "2064": "BuildPlan is null, Pass the correct BuildPlan.",
+  "2065": "Service cannot be Null or empty. Must be a valid number.",
+  "2066": "SkuRevison is null, Pass the correct revison.",
+  "2067": "Service should be either SKU insert(6) or SKU update(7).",
+  "2068": "The Identifier not present into Config Details file : ",
+  "2069": "Fullname cannot be null, pass the PM or L2 users full name or Full name is invalid- should be a string",
+  "2070": "Email of the new user added cannot be null or email is invalid",
+  "2071": "Manager email cannot be null for L2 user or email is invalid",
+  "2072": "User with same full name and role exist already ",
+  "2073": "Multiple entries found for user and role ",
+  "2074": "No entry present for given user and role ",
+  "2075": "Input passed is not an array ",
+  "2076": "There should be either email or manager email to be updated",
+  "2077": "Created date is not in date format",
+  "2078": "Updated date is not in date format",
+  "2079": "Created By is not a valid string",
+  "2080": "Updated By is not a valid string",
+  "2081": "Same entry already exists: ",
+  "2082": "SiteMaster cannot be Null or is not a valid string ",
+  "2083": "Site Master Server does not exist with the build plan or check if server is a line server: ",
+  "2084": "BuildPlan cannot be removed from site master as it is atatched to line server ",
+  "2085": "Site master server: %s does not exist. ",
+  "2086": "Server do not exist or No buildplan exist on the server: ",
+  "2087": "Either L2fullname or PMfullname must be required and must be a valid string.",
+  "2088": "SKUs cannot be null or empty, must be a valid array.",
+  "2089": "IsInternalCall should be Boolean.",
+  "2090": "BuildPlan cannot be null or empty. Must be an valid array.",
+  "2091": "Rparam cannot be null or empty. Should be a valid string.",
+  "2093": "X-Request-ID is undefined or not a valid string.",
+  "2094": "PDNGTranID is undefined or not a valid string.",
+  "2092": "Unknown Rparam. Should be either of updateSErverBP, updateServerSM or updateServerPML2",
+  "2500": "BuildPlan cannot be null, empty or the string format, must input the normal string array.",
+  "2501": "The buildPlan of Line server only can update single buildPlan.",
+  "2502": "The buildPlan of Liner server should match the buildPlan of SiteMaster server. Please check the buildPlan of SiteMaster server.",
+  "2503": "Missing siteMaster server in the buildPlan of Line server. Please check the buildPlan of Line server.",
+  "2504": "Cannot remove the buildPlan from the SiteMaster server as it is attached to another Line server.",
+  "2505": "Cannot remove the buildPlan of Line server.",
+  "2506": "Cannot drop the SiteMaster server as it's build plan attached to another Line server.",
+  "2507": "Server creater should be PM user.",
+  "2508": "Please do not set Master Server parameter as Master server.",
+  "2509": "Missing required properties in request body: ",
+  "2510": "IsMaster parameter should be boolean.",
+  "2511": "Site master does not exist",
+  "3000": {
+    "message": "The record has existed in Registration DB.",
+    "Suggestion": "Please check the record and try again."
+  },
+  "3001": {
+    "message": "The record has to be deleted by same requestor.",
+    "Suggestion": "Please check the record and try again."
+  },
+  "3002": {
+    "message": "Record not found in Registration DB.",
+    "Suggestion": "Please check the record and try again."
+  },
+  "90000": {
+    "Message": "%s must have at least one record with SkuNumber: %s, SkuRevision: %s, BomId: %s, BomRevision: %s, and TranId: %s and BomToBlob Doc_Type.",
+    "Suggestion": "Please provide valid B2FId."
+  },
+  "90001": {
+    "Message": "Sku Number: %s, Sku Revision: %s, BomId: %s, and BomRevision: %s is already exist in the %s container. You cannot update BOM values.",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90002": {
+    "Message": "You cannot insert new BOM when the SKU is already existing in the %s container.",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90003": {
+    "Message": "BOM Doc_Type for the SkuNumber: %s, SkuRevision: %s, BOM Doc_Type must exists before inserting the SKU Doc_Type.",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90004": {
+    "Message": "Sku Number: %s, Sku Revision: %s is already exist in the %s container. You cannot update SKU values other than EnDnld, EffectiveDt, EndOfLife and ExpirationDt fields.",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90005": {
+    "Message": "Buildplan update on %s is failed, check logs. Run updateServerBP functionality for %s with buildplan.",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90006": {
+    "Message": "Server: %s already exists.",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90007": {
+    "Message": "ServerType should exist in the container. Pass the right location. ServerType list of system is: %s",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90008": {
+    "Message": "Location should exist in the container. Pass the right location. Location list of system is: %s",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90009": {
+    "Message": "PM: %s does not exist in Users container. Pass the right PM name.",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90010": {
+    "Message": "L2: %s does not exist in Users container. Pass the right L2 name.",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90011": {
+    "Message": "Same user already exists in the container. user: %s, role: %s",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90012": {
+    "Message": "Cannot delete the SiteMaster server as it's build plan attached to another Line server.",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90013": {
+    "Message": "Cannot find current server: %s",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90014": {
+    "Message": "Not allow to remove the buildPlan from the SiteMaster server as it is attached to another Line server.",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90015": {
+    "Message": "Not allow to remove the buildPlan of Line server.",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90016": {
+    "Message": "No action taken: There are no available SKU/BOM entries in SkuToBom to be pushed to the service bus.",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90017": {
+    "Message": "The service operation is invalid. It should be either 'SKU insert (6)' or 'SKU update (7)'.",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90018": {
+    "Message": "Operation halted: No related BuildPlan for the SKU was found, hence no results can be pushed to the service bus.",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90019": {
+    "Message": "SKU with %s is not allowed to be exported to any location.",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90020": {
+    "Message": "Must provide valid Rparam parameter (%s).",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90021": {
+    "Message": "No Buildplan exists on the server: %s",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90022": {
+    "Message": "No Server exists in this site: %s",
+    "Suggestion": "Please provide valid input."
+  },
+  "90023": {
+    "Message": "ULFN: %s associate with Sku Number: '%s', Sku Revision: %s, BomId: %s and BomRevison: %s is already exist in the %s container. You cannot update BLOB values.",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90024": {
+    "Message": "Failed to insert blob to temp container when SKU is already existed in the %s container, which means the SKU is already released. You cannot insert new BLOB value as the same SKU Number/SKU Revision. Process item: %s.",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90025": {
+    "Message": "New ULFN: %s associate with Sku Number: %s, Sku Revision: %s, BomId: %s and BomRevison: %s inserted into %s",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90026": {
+    "Message": "Not allow to insert duplicate item. Failed Object: %s. Cosmos DB Exception: %s.",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90027": {
+    "Message": "Failed in Cosmos DB. Failed Object: %s. Cosmos DB Exception: %s.",
+    "Suggestion": "Please provide valid BlobId."
+  },
+  "90028": {
+    "Message": "INVALID_PARAMETER_TYPE - %s",
+    "Suggestion": "Please provide a/an %s input."
+  },
+  "90029": {
+    "Message": "REGEX_VALIDATION_FAILED - %s",
+    "Suggestion": "Please provide a valid string input."
+  },
+  "90030": {
+    "Message": "MISSING_PARAMETER - %s",
+    "Suggestion": "Please provide a required parameter."
+  },
+  "90031": {
+    "Message": "The Effective Date (EffectiveDt) must precede or be equal to the End of Life Date (EndOfLife).",
+    "Suggestion": "Please check the dates and try again."
+  },
+  "90032": {
+    "Message": "The End of Life Date (EndOfLife) must be earlier than the Expiration Date (ExpirationDt).",
+    "Suggestion": "Please check the dates and try again."
+  },
+  "90033": {
+    "Message": "Unprocessable Entity - %s",
+    "Suggestion": "Please check the dates and try again."
+  },
+  "90034": {
+    "Message": "No server description found with the provided server name.",
+    "Suggestion": "Please check the record and try again."
+  },
+  "90035": {
+    "Message": "Operation halted: No BOM with the specified Bom Doc_type exists for this Site build plan.",
+    "Suggestion": "Please check the record and try again."
+  },
+  "90036": {
+    "Message": "Operation halted: No SKU exists for this Site build plan.",
+    "Suggestion": "Please check the record and try again."
+  },
+  "90037": {
+    "Message": "No users exists for this role.",
+    "Suggestion": "Please check the record and try again."
+  },
+  "90038": {
+    "Message": "Operation failed: A new BOM or BLOB cannot be inserted because the SKU already exists in the Container.",
+    "Suggestion": "Please check the record and try again."
+  },
+  "90039": {
+    "Message": "Operation halted: No items were found with the provided transaction ID: %s",
+    "Suggestion": "Please check the record and try again."
+  },
+  "90040": {
+    "Message": "Operation failed: The Buildplan %s does not belong to the specified server.",
+    "Suggestion": "Please check the record and try again."
+  },
+  "90041": {
+    "Message": "The buildPlan of Line server only can update single buildPlan.",
+    "Suggestion": "Please check the record and try again."
+  },
+  "90042": {
+    "Message": "Missing siteMaster server in the buildPlan of Line server. Please check the buildPlan of Line server.",
+    "Suggestion": "Please check the record and try again."
+  },
+  "90043": {
+    "Message": "Site master server: %s does not exist.",
+    "Suggestion": "Please check the record and try again."
+  },
+  "90044": {
+    "Message": "Operation failed: The server already has the same Site master.",
+    "Suggestion": "Please check the record and try again."
+  },
+  "90045": {
+    "Message": "No any changes found in existing PM or L2 users, Please re-check.",
+    "Suggestion": "Please check the record and try again."
+  },
+  "90046": {
+    "Message": "SkuNumber: %s SkuRevision: %s can not be found for update.",
+    "Suggestion": "Please check the record and try again."
+  },
+  "90047": {
+    "Message": "No matching entry found for the specified user and role.",
+    "Suggestion": "Please check the record and try again."
+  },
+  "90048": {
+    "Message": "Multiple entry found for the specified user and role.",
+    "Suggestion": "Please check the record and try again."
+  },
+  "90049": {
+    "Message": "The duplicate record has already existed in SkuStatus.",
+    "Suggestion": "Please check the record and try again."
+  },
+  "90050": {
+    "Message": "The alert type %s is disabled.",
+    "Suggestion": "Please check the record and try again."
+  },
+  "90051": {
+    "Message": "The SKU count is exceeded the maximum array size. %s",
+    "Suggestion": "Please check the record and try again."
+  }
+}

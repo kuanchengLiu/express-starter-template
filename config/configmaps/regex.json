@@ -1,0 +1,107 @@
+{
+    "RegularExpression": {
+        "ActionType": "^(Create|Read|Update|Delete)$",
+        "Alphabets": "^[A-Za-z]+$",
+        "AlphaSpace": "^[A-Za-z ]+$",
+        "Alphanumeric": "^[A-Za-z0-9]+$",
+        "AlphanumericAndWhitespace": "^[A-Za-z0-9 ]+$",
+        "AlphanumericSpecial": "^[A-Za-z0-9-$\\\\_&+ ]+$",
+        "BlobId": "^[0-9A-Fa-f]+$",
+        "BomId": "^[A-Za-z0-9-.\\\\_ ]+$",
+        "Boolean": "^(true|false)$",
+        "Email": "^([A-Za-z0-9_\\-\\.\\+])+\\@(([a-zA-Z0-9\\-])+\\.)+([a-zA-Z0-9]{2,4})+$",
+        "ISODate": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,7})?(Z|[-+]\\d{2}:\\d{2})$",
+        "IPAddress": "^((?:(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d))$",
+        "LoosenExpression": "^[^<>\n;]*$",
+        "Numeric": "^[0-9]+$",
+        "SkuNumber": "^[a-zA-Z0-9-.]{1,18}$",
+        "UUID": "^[a-zA-Z0-9-]+$"
+    },
+    "RegMapping": {
+        "ActionType": [
+            "actionType"
+        ],
+        "AlphaSpace": [
+            "Location"
+        ],
+        "Alphabets": [
+            "Doc_Type",
+            "Site"
+        ],
+        "Alphanumeric": [
+            "EnDnld",
+            "HashTypeID",
+            "ServerName",
+            "Servername",
+            "Role",
+            "SiteMaster"
+        ],
+        "AlphanumericAndWhitespace": [
+            "CreatedBY",
+            "CreatedBy",
+            "FullName",
+            "Fullname",
+            "L2fullname",
+            "PMfullname",
+            "UpdatedBy"
+        ],
+        "AlphanumericSpecial": [
+            "BuildPlan",
+            "Buildplan",
+            "NewOwnerType",
+            "OwnerType",
+            "Rparam",
+            "SiteBuildPlan",
+            "TimeOffset",
+            "application",
+            "documentType",
+            "transactionId"
+        ],
+        "BlobId": [
+            "blobId"
+        ],
+        "BomId": [
+            "BomId"
+        ],
+        "Boolean": [
+            "IsMaster"
+        ],
+        "Email": [
+            "Account",
+            "Email",
+            "MGREmail",
+            "MgrEmail",
+            "username",
+            "UserName"
+        ],
+        "ISODate": [
+            "CreationDt",
+            "ExpirationDt",
+            "UpdatedDt",
+            "CreatedTime",
+            "ExpirationDt"
+        ],
+        "IPAddress": [
+            "IPAddress"
+        ],
+        "LoosenExpression": [
+            "Requestor",
+            "ServerType",
+            "UserId",
+            "OperationName"
+        ],
+        "Numeric": [
+            "BomRevision",
+            "Priority",
+            "Revision",
+            "SkuRevision"
+        ],
+        "SkuNumber": [
+            "SkuNumber"
+        ],
+        "UUID": [
+            "X-Request-ID",
+            "PDNGTranID"
+        ]
+    }
+}

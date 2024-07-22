@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="1" failures="0" errors="0" time="0.906">
+  <testsuite name="__test__\app.test.js" errors="0" failures="0" skipped="0" timestamp="2024-05-20T08:56:47" time="0.787" tests="1">
+    <testcase classname="RegexConfig should load regex config from file" name="RegexConfig should load regex config from file" time="0.036">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,91 @@
+pr: none
+trigger: none
+
+resources:
+  pipelines:
+  - pipeline: res
+    source: \AKS-CI\GIS-PDNG.CosmosDBRestAPI
+    branch: dev
+    trigger: none
+
+parameters:
+- name: deployTarget
+  displayName: 'Select deploy target'
+  type: string
+  values:
+  - itg2
+  - prod
+
+- name: itg2
+  type: object
+  default:
+  - kubeNamespace: 'itg'
+    serviceConnection: 'AKS-EA-ITG2-StandAlone'
+    deployment: 'deployment-3pod.yaml'
+  - kubeNamespace: 'itg'
+    serviceConnection: 'AKS-CUS-ITG2-StandAlone'
+    deployment: 'deployment-3pod.yaml'
+
+- name: prod
+  type: object
+  default:
+  - kubeNamespace: 'beta'
+    serviceConnection: 'AKS-CUS-Beta-StandAlone'
+    deployment: 'deployment-3pod.yaml'
+  - kubeNamespace: 'beta'
+    serviceConnection: 'AKS-EA-Beta-StandAlone'
+    deployment: 'deployment-3pod.yaml'
+  - kubeNamespace: 'prod'
+    serviceConnection: 'AKS-CUS-Prod-StandAlone'
+    deployment: 'deployment-3pod.yaml'
+  - kubeNamespace: 'prod'
+    serviceConnection: 'AKS-EA-Prod-StandAlone'
+    deployment: 'deployment-3pod.yaml'
+  - kubeNamespace: 'prod'
+    serviceConnection: 'AKS-GWC-Prod-StandAlone'
+    deployment: 'deployment-3pod.yaml'
+  - kubeNamespace: 'prod'
+    serviceConnection: 'AKS-KS-Prod-StandAlone'
+    deployment: 'deployment-3pod.yaml'
+
+
+pool:
+  name: codeway-aws-win2022
+steps:
+- bash: printenv | sort
+
+- download: res
+  artifact: yaml
+
+- ${{ if contains(parameters.deployTarget, 'itg2') }}:
+  - ${{ each env in parameters.itg2 }}:
+    - task: KubernetesManifest@0
+      displayName: 'Deploy to ${{ env.serviceConnection }}'
+      inputs:
+        action: 'deploy'
+        kubernetesServiceConnection: '${{env.serviceConnection}}'
+        namespace: '${{env.kubeNamespace}}'
+        manifests: '$(Pipeline.Workspace)/res/yaml/${{env.deployment}}'
+        containers: 'harbor.ext.hp.com/prism-next-generation/pdng-cosmosrestapi:$(resources.pipeline.res.sourceCommit)'
+
+- ${{ if contains(parameters.deployTarget, 'prod') }}:
+  - ${{ each env in parameters.prod }}:
+    - task: KubernetesManifest@0
+      displayName: 'Deploy to ${{ env.serviceConnection }}'
+      inputs:
+        action: 'deploy'
+        kubernetesServiceConnection: '${{env.serviceConnection}}'
+        namespace: '${{env.kubeNamespace}}'
+        manifests: '$(Pipeline.Workspace)/res/yaml/${{env.deployment}}'
+        containers: 'harbor.ext.hp.com/prism-next-generation/pdng-cosmosrestapi:$(resources.pipeline.res.sourceCommit)'
+
+- task: EmailReportV2@2
+  displayName: 'Email Report'
+  condition: always()
+  inputs:
+    subject: 'CosmosDBRestAPI CD-prod {environmentStatus} in ${{parameters.deployTarget}} with image:$(resources.pipeline.res.sourceCommit)'
+    toAddress: 'png.all@hp.com'
+    defaultDomain: hp.com
+    enableTLS: false
+    smtpConnectionEndpoint: 'AKS_email_connection'
+    
