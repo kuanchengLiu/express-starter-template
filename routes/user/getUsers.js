@@ -3,7 +3,7 @@
 /************************************************
  * version : 01.00.00.00 - 19/10/2020
  * Class/Method : getUsers.js
- * Description : This script gets user details for a given role from users conatiner in PrismDB
+ * Description : This script gets user details for a given role from users conatiner
  ************************************************/
 /************************************************************************************
  *  Lists out the users for the given role - PM or L2
